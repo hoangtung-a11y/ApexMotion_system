@@ -1,0 +1,28 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "1. Cài đặt thư viện (npm install)",
+      "type": "shell",
+      "command": "npm.cmd install",
+      "problemMatcher": []
+    },
+    {
+      "label": "2. Chạy hệ thống ApexMotion (Dev Server + REST API)",
+      "type": "shell",
+      "command": "npm.cmd run dev",
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "3. Kiểm tra biên dịch TypeScript & Build Production",
+      "type": "shell",
+      "command": "npm.cmd run build",
+      "problemMatcher": ["$tsc"]
+    }
+  ]
+}

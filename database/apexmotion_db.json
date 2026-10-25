@@ -1,0 +1,831 @@
+{
+  "users": [
+    {
+      "id": "USR-ADMIN-001",
+      "email": "admin@apexmotion.vn",
+      "password_hash": "Admin@123",
+      "full_name": "Quản Trị Viên ApexMotion",
+      "phone": "0901234567",
+      "avatar_url": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&auto=format&fit=crop&q=80",
+      "role": "ADMIN",
+      "occupation": "Quản trị viên hệ thống",
+      "is_active": true,
+      "created_at": "2026-01-10T08:00:00Z",
+      "updated_at": "2026-10-20T08:00:00Z"
+    },
+    {
+      "id": "TV-008246",
+      "email": "minhanh@apexmotion.vn",
+      "password_hash": "MinhAnh@123",
+      "full_name": "Nguyễn Minh Anh",
+      "phone": "0987654321",
+      "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&auto=format&fit=crop&q=80",
+      "role": "CUSTOMER",
+      "occupation": "Trưởng nhóm marketing",
+      "is_active": true,
+      "created_at": "2026-02-15T09:30:00Z",
+      "updated_at": "2026-10-24T14:20:00Z"
+    },
+    {
+      "id": "TV-008247",
+      "email": "quangnd@apexmotion.vn",
+      "password_hash": "Quang@123",
+      "full_name": "Nguyễn Đức Quang",
+      "phone": "0912345678",
+      "avatar_url": "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?w=200&auto=format&fit=crop&q=80",
+      "role": "CUSTOMER",
+      "occupation": "Vận động viên bán chuyên",
+      "is_active": true,
+      "created_at": "2026-03-01T10:15:00Z",
+      "updated_at": "2026-10-22T11:00:00Z"
+    },
+    {
+      "id": "TV-289870",
+      "email": "emlaai5666@gmail.com",
+      "password_hash": "Tungz395#",
+      "full_name": "Phạm Hoàng Tùng",
+      "phone": "0988888888",
+      "avatar_url": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200",
+      "role": "CUSTOMER",
+      "occupation": "Khách hàng thành viên",
+      "is_active": true,
+      "created_at": "2026-10-25T16:33:38.692Z",
+      "updated_at": "2026-10-25T16:33:38.692Z"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "ADDR-001",
+      "receiver_name": "Nguyễn Minh Anh",
+      "receiver_phone": "0987654321",
+      "province": "Đà Nẵng",
+      "district": "Quận Hải Châu",
+      "ward": "Phường Thạch Thang",
+      "street_address": "128 Nguyễn Văn Linh",
+      "is_default": true,
+      "user_id": "TV-008246"
+    },
+    {
+      "id": "ADDR-002",
+      "receiver_name": "Nguyễn Minh Anh",
+      "receiver_phone": "0987654321",
+      "province": "Hà Nội",
+      "district": "Quận Bắc Từ Liêm",
+      "ward": "Phường Minh Khai",
+      "street_address": "Số 298 Cầu Diễn",
+      "is_default": false,
+      "user_id": "TV-008246"
+    },
+    {
+      "id": "ADDR-003",
+      "receiver_name": "Nguyễn Đức Quang",
+      "receiver_phone": "0912345678",
+      "province": "Hà Nội",
+      "district": "Quận Cầu Giấy",
+      "ward": "Phường Dịch Vọng",
+      "street_address": "Số 85 Xuân Thủy",
+      "is_default": true,
+      "user_id": "TV-008247"
+    },
+    {
+      "id": "ADDR-1792946067934",
+      "receiver_name": "Phạm Hoàng Tùng",
+      "receiver_phone": "0988888888",
+      "province": "Hà Nội",
+      "district": "Quận Bắc Từ Liêm",
+      "ward": "Phường Minh Khai",
+      "street_address": "128 Nguyễn Văn Linh",
+      "is_default": false,
+      "user_id": "TV-289870"
+    }
+  ],
+  "categories": [
+    {
+      "id": "CAT-SHOES",
+      "name": "Giày Chạy Bộ & Thể Thao",
+      "slug": "giay-chay-bo",
+      "description": "Giày chạy bộ marathon, chạy địa hình và tập luyện hiệu suất cao",
+      "img_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+      "display_order": 1,
+      "is_active": true
+    },
+    {
+      "id": "CAT-APPAREL",
+      "name": "Trang Phục Tập Gym & Thể Thao",
+      "slug": "trang-phuc-the-thao",
+      "description": "Áo thun thể thao, quần chạy bộ thoáng khí công nghệ Dry-Fit",
+      "img_url": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+      "display_order": 2,
+      "is_active": true
+    },
+    {
+      "id": "CAT-BADMINTON",
+      "name": "Vợt & Phụ Kiện Cầu Lông",
+      "slug": "vot-cau-long",
+      "description": "Vợt cầu lông chuyên nghiệp, cầu lông, túi đựng và phụ kiện sân đấu",
+      "img_url": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600&auto=format&fit=crop&q=80",
+      "display_order": 3,
+      "is_active": true
+    },
+    {
+      "id": "CAT-EQUIP",
+      "name": "Dụng Cụ Tập Luyện & Phụ Kiện",
+      "slug": "dung-cu-the-thao",
+      "description": "Tạ tay, thảm yoga, bình nước thể thao, đồng hồ bấm giờ và băng bảo vệ",
+      "img_url": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop&q=80",
+      "display_order": 4,
+      "is_active": true
+    }
+  ],
+  "products": [
+    {
+      "id": "SP-001",
+      "name": "Vợt cầu lông Yonex Astrox 77",
+      "slug": "vot-cau-long-yonex-astrox-77",
+      "description": "Vợt cầu lông chuyên công thiên về sức mạnh đập cầu, thân vợt Namd đàn hồi cao, phù hợp người chơi phong trào và bán chuyên.",
+      "brand": "Yonex",
+      "base_price": 250000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 4.9,
+      "review_count": 18,
+      "is_active": true,
+      "created_at": "2026-09-01T08:00:00Z",
+      "category_id": "CAT-BADMINTON"
+    },
+    {
+      "id": "SP-002",
+      "name": "Áo thể thao Apex Dry-Fit Pro",
+      "slug": "ao-the-thao-apex-dry-fit-pro",
+      "description": "Áo thun tập gym và chạy bộ chất liệu Polyester pha Spandex siêu nhẹ, thấm hút mồ hôi nhanh và kháng khuẩn khử mùi.",
+      "brand": "ApexMotion",
+      "base_price": 350000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 4.8,
+      "review_count": 24,
+      "is_active": true,
+      "created_at": "2026-09-05T08:00:00Z",
+      "category_id": "CAT-APPAREL"
+    },
+    {
+      "id": "SP-003",
+      "name": "Giày Thể Thao Apex Velocity X",
+      "slug": "giay-the-thao-apex-velocity-x",
+      "description": "Giày thể thao đa năng hỗ trợ tập gym, đi bộ và chạy cự ly ngắn 5km-10km, đệm EVA êm ái chống trượt.",
+      "brand": "ApexMotion",
+      "base_price": 500000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 4.7,
+      "review_count": 15,
+      "is_active": true,
+      "created_at": "2026-09-10T08:00:00Z",
+      "category_id": "CAT-SHOES"
+    },
+    {
+      "id": "SP-004",
+      "name": "Apex Nitro Pro v2 (Royal Blue)",
+      "slug": "apex-nitro-pro-v2-blue",
+      "description": "Giày chạy bộ marathon nam/nữ tích hợp đệm bọt Nitơ siêu nảy và tấm sợi Carbon hỗ trợ bứt tốc cự ly 21km - 42km, giá dưới 2 triệu.",
+      "brand": "ApexMotion",
+      "base_price": 1650000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 5,
+      "review_count": 32,
+      "is_active": true,
+      "created_at": "2026-09-12T08:00:00Z",
+      "category_id": "CAT-SHOES"
+    },
+    {
+      "id": "SP-005",
+      "name": "Apex Nitro Pro v2 (Silver Edition)",
+      "slug": "apex-nitro-pro-v2-silver",
+      "description": "Phiên bản màu bạc phản quang của dòng giày chạy bộ đường dài Apex Nitro Pro v2, cổ giày ôm chân, thoáng khí tối đa cho chạy marathon.",
+      "brand": "ApexMotion",
+      "base_price": 1650000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 4.9,
+      "review_count": 19,
+      "is_active": true,
+      "created_at": "2026-09-15T08:00:00Z",
+      "category_id": "CAT-SHOES"
+    },
+    {
+      "id": "SP-006",
+      "name": "Giày Chạy Bộ Nam Slip-On PEAK TAICHI ET59305H",
+      "slug": "giay-chay-bo-nam-slip-on-peak-taichi-et59305h",
+      "description": "Giày chạy bộ không dây tiện lợi sử dụng công nghệ đệm thông minh PEAK TAICHI tự thích ứng theo tốc độ bước chạy.",
+      "brand": "PEAK",
+      "base_price": 999000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 4.9,
+      "review_count": 27,
+      "is_active": true,
+      "created_at": "2026-09-18T08:00:00Z",
+      "category_id": "CAT-SHOES"
+    },
+    {
+      "id": "SP-007",
+      "name": "Bộ Đồ Tập Gym Nam Compression Pro",
+      "slug": "bo-do-tap-gym-nam-compression-pro",
+      "description": "Bộ quần áo tập gym ôm cơ co giãn 4 chiều giúp cố định cơ bắp, giảm chấn thương khi nâng tạ nặng và cardio cường độ cao.",
+      "brand": "ApexMotion",
+      "base_price": 590000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 4.8,
+      "review_count": 14,
+      "is_active": true,
+      "created_at": "2026-09-20T08:00:00Z",
+      "category_id": "CAT-APPAREL"
+    },
+    {
+      "id": "SP-008",
+      "name": "Thảm Tập Yoga & Fitness TPE 8mm Cao Cấp",
+      "slug": "tham-tap-yoga-fitness-tpe-8mm",
+      "description": "Thảm tập TPE 2 lớp chống trượt tuyệt đối, độ dày 8mm bảo vệ khớp gối và cột sống khi tập Yoga, Pilates và Plank tại nhà.",
+      "brand": "ApexMotion",
+      "base_price": 420000,
+      "thumbnail_url": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=600&auto=format&fit=crop&q=80",
+      "avg_rating": 4.9,
+      "review_count": 21,
+      "is_active": true,
+      "created_at": "2026-09-22T08:00:00Z",
+      "category_id": "CAT-EQUIP"
+    }
+  ],
+  "product_images": [
+    {
+      "id": "IMG-001",
+      "image_url": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-001"
+    },
+    {
+      "id": "IMG-002",
+      "image_url": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-002"
+    },
+    {
+      "id": "IMG-003",
+      "image_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-003"
+    },
+    {
+      "id": "IMG-004",
+      "image_url": "https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-004"
+    },
+    {
+      "id": "IMG-005",
+      "image_url": "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-005"
+    },
+    {
+      "id": "IMG-006",
+      "image_url": "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-006"
+    },
+    {
+      "id": "IMG-007",
+      "image_url": "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-007"
+    },
+    {
+      "id": "IMG-008",
+      "image_url": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=800&auto=format&fit=crop&q=80",
+      "is_primary": true,
+      "display_order": 1,
+      "product_id": "SP-008"
+    }
+  ],
+  "product_variants": [
+    {
+      "id": "VAR-001-4U",
+      "size": "4U (83g)",
+      "color": "Đỏ Đen",
+      "sku": "YNX-AX77-4U",
+      "price": 250000,
+      "stock_quantity": 29,
+      "is_active": true,
+      "product_id": "SP-001"
+    },
+    {
+      "id": "VAR-001-3U",
+      "size": "3U (88g)",
+      "color": "Vàng Xanh",
+      "sku": "YNX-AX77-3U",
+      "price": 250000,
+      "stock_quantity": 20,
+      "is_active": true,
+      "product_id": "SP-001"
+    },
+    {
+      "id": "VAR-002-M",
+      "size": "M",
+      "color": "Đen",
+      "sku": "APX-DRY-M-BLK",
+      "price": 350000,
+      "stock_quantity": 15,
+      "is_active": true,
+      "product_id": "SP-002"
+    },
+    {
+      "id": "VAR-002-L",
+      "size": "L",
+      "color": "Xanh Navy",
+      "sku": "APX-DRY-L-NVY",
+      "price": 350000,
+      "stock_quantity": 15,
+      "is_active": true,
+      "product_id": "SP-002"
+    },
+    {
+      "id": "VAR-003-41",
+      "size": "41",
+      "color": "Đỏ Trắng",
+      "sku": "APX-VEL-41",
+      "price": 500000,
+      "stock_quantity": 8,
+      "is_active": true,
+      "product_id": "SP-003"
+    },
+    {
+      "id": "VAR-003-42",
+      "size": "42",
+      "color": "Đỏ Trắng",
+      "sku": "APX-VEL-42",
+      "price": 500000,
+      "stock_quantity": 7,
+      "is_active": true,
+      "product_id": "SP-003"
+    },
+    {
+      "id": "VAR-004-41",
+      "size": "41",
+      "color": "Xanh Royal",
+      "sku": "APX-NP2-BL-41",
+      "price": 1650000,
+      "stock_quantity": 12,
+      "is_active": true,
+      "product_id": "SP-004"
+    },
+    {
+      "id": "VAR-004-42",
+      "size": "42",
+      "color": "Xanh Royal",
+      "sku": "APX-NP2-BL-42",
+      "price": 1650000,
+      "stock_quantity": 20,
+      "is_active": true,
+      "product_id": "SP-004"
+    },
+    {
+      "id": "VAR-004-43",
+      "size": "43",
+      "color": "Xanh Royal",
+      "sku": "APX-NP2-BL-43",
+      "price": 1650000,
+      "stock_quantity": 10,
+      "is_active": true,
+      "product_id": "SP-004"
+    },
+    {
+      "id": "VAR-005-40",
+      "size": "40",
+      "color": "Bạc Trắng",
+      "sku": "APX-NP2-SV-40",
+      "price": 1650000,
+      "stock_quantity": 14,
+      "is_active": true,
+      "product_id": "SP-005"
+    },
+    {
+      "id": "VAR-005-42",
+      "size": "42",
+      "color": "Bạc Trắng",
+      "sku": "APX-NP2-SV-42",
+      "price": 1650000,
+      "stock_quantity": 18,
+      "is_active": true,
+      "product_id": "SP-005"
+    },
+    {
+      "id": "VAR-006-39",
+      "size": "39",
+      "color": "Đen ghi trắng",
+      "sku": "PEAK-TC-39",
+      "price": 999000,
+      "stock_quantity": 15,
+      "is_active": true,
+      "product_id": "SP-006"
+    },
+    {
+      "id": "VAR-006-42",
+      "size": "42",
+      "color": "Đen ghi trắng",
+      "sku": "PEAK-TC-42",
+      "price": 999000,
+      "stock_quantity": 12,
+      "is_active": true,
+      "product_id": "SP-006"
+    },
+    {
+      "id": "VAR-007-L",
+      "size": "L",
+      "color": "Đen Xám",
+      "sku": "APX-COMP-L",
+      "price": 590000,
+      "stock_quantity": 22,
+      "is_active": true,
+      "product_id": "SP-007"
+    },
+    {
+      "id": "VAR-007-XL",
+      "size": "XL",
+      "color": "Đen Xám",
+      "sku": "APX-COMP-XL",
+      "price": 590000,
+      "stock_quantity": 18,
+      "is_active": true,
+      "product_id": "SP-007"
+    },
+    {
+      "id": "VAR-008-STD",
+      "size": "183x61cm (8mm)",
+      "color": "Xanh Ngọc",
+      "sku": "APX-YOGA-8MM",
+      "price": 420000,
+      "stock_quantity": 40,
+      "is_active": true,
+      "product_id": "SP-008"
+    }
+  ],
+  "product_embeddings": [
+    {
+      "id": "EMB-001",
+      "content_text": "Vợt cầu lông Yonex Astrox 77 chuyên công đập cầu mạnh mẽ giá 250000đ size 3U 4U ưu đãi hot",
+      "content_hash": "hash-sp-001",
+      "embedding_preview": [
+        0.0284,
+        0.5389,
+        0.0284,
+        0.0284,
+        0.4822,
+        0.0567,
+        0.0567,
+        0.0567,
+        0.4822,
+        0.4822
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-001"
+    },
+    {
+      "id": "EMB-002",
+      "content_text": "Áo thể thao Apex Dry-Fit Pro đồ tập gym chạy bộ thoáng khí thấm mồ hôi giá 350000đ size M L",
+      "content_hash": "hash-sp-002",
+      "embedding_preview": [
+        0.521,
+        0.0274,
+        0.521,
+        0.0274,
+        0.4661,
+        0.0548,
+        0.0548,
+        0.0548,
+        0.4661,
+        0.1097
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-002"
+    },
+    {
+      "id": "EMB-003",
+      "content_text": "Giày Thể Thao Apex Velocity X chạy bộ tập gym giá rẻ 500000đ dưới 2 triệu size 41 42",
+      "content_hash": "hash-sp-003",
+      "embedding_preview": [
+        0.4629,
+        0.0244,
+        0.4629,
+        0.0244,
+        0.4141,
+        0.4385,
+        0.4385,
+        0.0487,
+        0.0487,
+        0.0974
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-003"
+    },
+    {
+      "id": "EMB-004",
+      "content_text": "Giày chạy bộ marathon nam nữ Apex Nitro Pro v2 Royal Blue size 41 size 42 size 43 dưới 2 triệu < 2tr giá 1650000đ đệm carbon ưu đãi hot",
+      "content_hash": "hash-sp-004",
+      "embedding_preview": [
+        0.4379,
+        0.023,
+        0.023,
+        0.023,
+        0.3918,
+        0.4148,
+        0.4148,
+        0.0461,
+        0.3918,
+        0.3918
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-004"
+    },
+    {
+      "id": "EMB-005",
+      "content_text": "Giày chạy bộ marathon nam nữ Apex Nitro Pro v2 Silver Edition màu bạc size 40 size 42 dưới 2 triệu < 2tr giá 1650000đ ưu đãi hot",
+      "content_hash": "hash-sp-005",
+      "embedding_preview": [
+        0.4048,
+        0.0213,
+        0.0213,
+        0.0213,
+        0.3622,
+        0.3835,
+        0.3835,
+        0.3835,
+        0.3622,
+        0.3622
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-005"
+    },
+    {
+      "id": "EMB-006",
+      "content_text": "Giày Chạy Bộ Nam Slip-On PEAK TAICHI ET59305H đen ghi trắng size 39 size 42 giá 999000đ dưới 1 triệu dưới 2 triệu êm chân",
+      "content_hash": "hash-sp-006",
+      "embedding_preview": [
+        0.4677,
+        0.0246,
+        0.0246,
+        0.0246,
+        0.0739,
+        0.4431,
+        0.4431,
+        0.4431,
+        0.4185,
+        0.0985
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-006"
+    },
+    {
+      "id": "EMB-007",
+      "content_text": "Bộ đồ tập gym nam Compression Pro quần áo tập gym co giãn 4 chiều nâng tạ cardio giá 590000đ size L XL",
+      "content_hash": "hash-sp-007",
+      "embedding_preview": [
+        0.0381,
+        0.0381,
+        0.7233,
+        0.0381,
+        0.1142,
+        0.0761,
+        0.0761,
+        0.0761,
+        0.6472,
+        0.1523
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-007"
+    },
+    {
+      "id": "EMB-008",
+      "content_text": "Thảm tập Yoga Fitness TPE 8mm dụng cụ thể thao chống trượt tập tại nhà giá 420000đ ưu đãi hot",
+      "content_hash": "hash-sp-008",
+      "embedding_preview": [
+        0.0284,
+        0.0284,
+        0.0284,
+        0.5389,
+        0.4822,
+        0.0567,
+        0.0567,
+        0.0567,
+        0.4822,
+        0.4822
+      ],
+      "updated_at": "2026-10-01T08:00:00Z",
+      "product_id": "SP-008"
+    }
+  ],
+  "cart_items": [
+    {
+      "user_id": "TV-008246",
+      "product_variant_id": "VAR-006-39",
+      "quantity": 1
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-2026-004",
+      "receiver_name": "Phạm Hoàng Tùng",
+      "receiver_phone": "0988888888",
+      "shipping_address": "128 Nguyễn Văn Linh, Phường Minh Khai, Quận Bắc Từ Liêm, Hà Nội",
+      "subtotal": 250000,
+      "shipping_fee": 0,
+      "total_amount": 250000,
+      "status": "PENDING",
+      "payment_method": "QR",
+      "payment_status": "PAID",
+      "note": "",
+      "created_at": "2026-10-25T16:34:27.933Z",
+      "user_id": "TV-289870",
+      "fraud_score": 0.05
+    },
+    {
+      "id": "ORD-2026-001",
+      "receiver_name": "Nguyễn Minh Anh",
+      "receiver_phone": "0987654321",
+      "shipping_address": "128 Nguyễn Văn Linh, Phường Thạch Thang, Quận Hải Châu, Đà Nẵng",
+      "subtotal": 999000,
+      "shipping_fee": 0,
+      "total_amount": 999000,
+      "status": "COMPLETED",
+      "payment_method": "QR",
+      "payment_status": "PAID",
+      "note": "Giao giờ hành chính",
+      "created_at": "2026-10-12T09:15:00Z",
+      "user_id": "TV-008246",
+      "fraud_score": 0.04
+    },
+    {
+      "id": "ORD-2026-002",
+      "receiver_name": "Nguyễn Minh Anh",
+      "receiver_phone": "0987654321",
+      "shipping_address": "128 Nguyễn Văn Linh, Phường Thạch Thang, Quận Hải Châu, Đà Nẵng",
+      "subtotal": 1650000,
+      "shipping_fee": 0,
+      "total_amount": 1650000,
+      "status": "SHIPPING",
+      "payment_method": "COD",
+      "payment_status": "UNPAID",
+      "note": "Gọi trước khi giao 15 phút",
+      "created_at": "2026-10-23T15:40:00Z",
+      "user_id": "TV-008246",
+      "fraud_score": 0.08
+    },
+    {
+      "id": "ORD-2026-003",
+      "receiver_name": "Nguyễn Đức Quang",
+      "receiver_phone": "0912345678",
+      "shipping_address": "Số 85 Xuân Thủy, Phường Dịch Vọng, Quận Cầu Giấy, Hà Nội",
+      "subtotal": 600000,
+      "shipping_fee": 0,
+      "total_amount": 600000,
+      "status": "COMPLETED",
+      "payment_method": "VNPAY",
+      "payment_status": "PAID",
+      "note": "Đóng gói kỹ vợt cầu lông",
+      "created_at": "2026-10-18T11:20:00Z",
+      "user_id": "TV-008247",
+      "fraud_score": 0.03
+    }
+  ],
+  "order_items": [
+    {
+      "id": "OIT-1792946067933-0",
+      "product_name": "Vợt cầu lông Yonex Astrox 77",
+      "variant_info": "Đỏ Đen / 4U (83g)",
+      "unit_price": 250000,
+      "quantity": 1,
+      "product_variant_id": "VAR-001-4U",
+      "order_id": "ORD-2026-004"
+    },
+    {
+      "id": "OIT-001",
+      "product_name": "Giày Chạy Bộ Nam Slip-On PEAK TAICHI ET59305H",
+      "variant_info": "Đen ghi trắng / 39",
+      "unit_price": 999000,
+      "quantity": 1,
+      "product_variant_id": "VAR-006-39",
+      "order_id": "ORD-2026-001"
+    },
+    {
+      "id": "OIT-002",
+      "product_name": "Apex Nitro Pro v2 (Royal Blue)",
+      "variant_info": "Xanh Royal / 42",
+      "unit_price": 1650000,
+      "quantity": 1,
+      "product_variant_id": "VAR-004-42",
+      "order_id": "ORD-2026-002"
+    },
+    {
+      "id": "OIT-003",
+      "product_name": "Vợt cầu lông Yonex Astrox 77",
+      "variant_info": "Đỏ Đen / 4U (83g)",
+      "unit_price": 250000,
+      "quantity": 1,
+      "product_variant_id": "VAR-001-4U",
+      "order_id": "ORD-2026-003"
+    },
+    {
+      "id": "OIT-004",
+      "product_name": "Áo thể thao Apex Dry-Fit Pro",
+      "variant_info": "Đen / M",
+      "unit_price": 350000,
+      "quantity": 1,
+      "product_variant_id": "VAR-002-M",
+      "order_id": "ORD-2026-003"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV-001",
+      "rating": 5,
+      "comment": "Giày PEAK TAICHI đi cực kỳ êm chân, form Slip-On xỏ vào rất tiện khi đi chạy bộ buổi sáng!",
+      "created_at": "2026-10-14T10:00:00Z",
+      "user_id": "TV-008246",
+      "order_item_id": "OIT-001",
+      "product_id": "SP-006"
+    },
+    {
+      "id": "REV-002",
+      "rating": 5,
+      "comment": "Vợt cầu lông Yonex Astrox 77 cầm đầm tay, đập cầu rất thoát và chắc chắn. Giao hàng nhanh!",
+      "created_at": "2026-10-19T16:30:00Z",
+      "user_id": "TV-008247",
+      "order_item_id": "OIT-003",
+      "product_id": "SP-001"
+    },
+    {
+      "id": "REV-003",
+      "rating": 5,
+      "comment": "Áo Dry-Fit mặc mát, tập gym không bị bí mồ hôi. Sẽ ủng hộ ApexMotion thêm.",
+      "created_at": "2026-10-19T16:35:00Z",
+      "user_id": "TV-008247",
+      "order_item_id": "OIT-004",
+      "product_id": "SP-002"
+    }
+  ],
+  "chat_sessions": [
+    {
+      "id": "CHAT-SES-001",
+      "title": "Tư vấn giày chạy nam size 42 < 2tr",
+      "created_at": "2026-10-25T09:00:00Z",
+      "user_id": "TV-008246"
+    }
+  ],
+  "chat_messages": [
+    {
+      "id": "MSG-001",
+      "role": "ASSISTANT",
+      "content": "Xin chào! Tôi có thể tư vấn giày chạy bộ hoặc trang phục thể thao cho bạn.",
+      "product_ids_json": "[]",
+      "created_at": "2026-10-25T09:00:00Z",
+      "chat_session_id": "CHAT-SES-001"
+    },
+    {
+      "id": "MSG-002",
+      "role": "USER",
+      "content": "Tư vấn giày chạy nam size 42 < 2tr",
+      "product_ids_json": "[]",
+      "created_at": "2026-10-25T09:01:00Z",
+      "chat_session_id": "CHAT-SES-001"
+    },
+    {
+      "id": "MSG-003",
+      "role": "ASSISTANT",
+      "content": "Dựa trên yêu cầu giày chạy bộ nam size 42 dưới 2 triệu đồng, tôi gợi ý 2 phiên bản Apex Nitro Pro v2 đang có sẵn Size 42 với đệm bọt Nitơ siêu nảy:",
+      "product_ids_json": "[\"SP-004\",\"SP-005\"]",
+      "recommended_size": "Size 42",
+      "rag_trace": {
+        "extracted_keywords": [
+          "giày chạy",
+          "size 42",
+          "< 2tr"
+        ],
+        "max_price": 2000000,
+        "size_filter": "42",
+        "cosine_scores": [
+          {
+            "product_id": "SP-004",
+            "score": 0.96
+          },
+          {
+            "product_id": "SP-005",
+            "score": 0.95
+          }
+        ]
+      },
+      "created_at": "2026-10-25T09:01:02Z",
+      "chat_session_id": "CHAT-SES-001"
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ============================================================================
+ * 1. Modern Web Guidance: light-dismiss-a-dialog
+ * ============================================================================ */
+dialog::backdrop {
+  background-color: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+/* ============================================================================
+ * 2. Modern Web Guidance: responsive-table (Sticky headers + Container queries)
+ * ============================================================================ */
+.table-wrapper {
+  overflow: auto;
+  max-inline-size: 100%;
+  max-block-size: min(560px, 80vh);
+  container-type: inline-size;
+}
+
+.table-wrapper table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.table-wrapper thead {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 2;
+}
+
+.table-wrapper tbody th {
+  position: sticky;
+  inset-inline-start: 0;
+  background: white;
+  z-index: 1;
+}
+
+@container (width < 600px) {
+  .table-wrapper table,
+  .table-wrapper thead,
+  .table-wrapper tbody,
+  .table-wrapper tr,
+  .table-wrapper th,
+  .table-wrapper td {
+    display: block;
+  }
+
+  .table-wrapper thead {
+    /* MANDATORY: Hide column header from layout and screen readers on narrow containers */
+    display: none;
+  }
+
+  .table-wrapper tr {
+    margin-block-end: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: white;
+  }
+
+  .table-wrapper tbody th {
+    position: sticky;
+    inset-block-start: 0;
+    z-index: 2;
+    background: #f1f5f9;
+    padding: 0.75rem 1rem;
+  }
+
+  .table-wrapper table {
+    --label-2: "Hình ảnh";
+    --label-3: "Tên sản phẩm";
+    --label-4: "Giá bán";
+    --label-5: "Số lượng";
+    --label-6: "Thao tác";
+  }
+
+  .table-wrapper td:nth-child(2)::before {
+    content: var(--label-2) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+  .table-wrapper td:nth-child(3)::before {
+    content: var(--label-3) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+  .table-wrapper td:nth-child(4)::before {
+    content: var(--label-4) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+  .table-wrapper td:nth-child(5)::before {
+    content: var(--label-5) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+  .table-wrapper td:nth-child(6)::before {
+    content: var(--label-6) ": ";
+    font-weight: 600;
+    color: #475569;
+  }
+}
+
+/* ============================================================================
+ * 3. Modern Web Guidance: validate-input-after-interaction (:user-invalid / :user-valid)
+ * ============================================================================ */
+.hint {
+  display: block;
+  color: #64748b;
+  font-size: 0.78rem;
+  margin-bottom: 0.25rem;
+}
+
+.error-msg {
+  display: none;
+  color: #dc2626;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.rules-list {
+  color: #64748b;
+  font-size: 0.78rem;
+  margin-bottom: 0.4rem;
+  list-style: disc inside;
+}
+
+input:user-invalid,
+input.user-invalid-fallback {
+  border-color: #dc2626 !important;
+  background-color: #fef2f2 !important;
+}
+
+input:user-invalid + .error-msg,
+input.user-invalid-fallback + .error-msg {
+  display: block;
+}
+
+input:user-valid,
+input.user-valid-fallback {
+  border-color: #16a34a;
+}
+
+.field:has(input:user-invalid) .rules-list,
+.field:has(input.user-invalid-fallback) .rules-list {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.field:has(input:user-valid) .rules-list,
+.field:has(input.user-valid-fallback) .rules-list {
+  display: none;
+}

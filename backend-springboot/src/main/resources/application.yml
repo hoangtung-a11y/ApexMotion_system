@@ -1,0 +1,36 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: apexmotion-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/apexmotion_db
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+apexmotion:
+  jwt:
+    secret: ApexMotionSecretKey2026ForJwtTokenAuthenticationMustBeAtLeast256BitsLong
+    expiration-ms: 86400000
+  ai:
+    embedding-model: text-embedding-3-small
+    llm-model: gemini-2.5-flash
+    vector-dimensions: 1536
+  vnpay:
+    tmn-code: APEXMOTION01
+    hash-secret: VNPAYSANDBOXSECRET2026
+    pay-url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
